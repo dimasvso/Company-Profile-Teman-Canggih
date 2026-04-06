@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaTwitter, FaInstagram, FaDribbble, FaMediumM } from "react-icons/fa";
+import NavbarLogo from '../assets/Navbar-Logo.png';
 
 const Navbar = ({ variant = "none" }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,18 +19,18 @@ const Navbar = ({ variant = "none" }) => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 px-8 py-4 flex items-center justify-between ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 px-30 py-4 flex items-center justify-between ${
         variant !== "full" ? "pr-100" : ""
       } ${
         isScrolled ? "bg-black/80 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="flex items-center">
-        <div className="bg-white p-2 rounded-2xl flex items-center justify-center w-32 shadow-sm">
+        <div className="bg-white p-2 rounded-4xl flex items-center justify-center w-20 shadow-sm">
           <img
-            src=""
+            src={NavbarLogo}
             alt="Teman Canggih Logo"
-            className="h-10 object-contain"
+            className="h-10  object-contain"
           />
         </div>
       </div>
