@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaTwitter, FaInstagram, FaDribbble, FaMediumM, FaBars, FaTimes } from "react-icons/fa";
 import NavbarLogo from '../assets/Navbar-Logo.png';
+import { Link } from "react-router-dom";
 
 const Navbar = ({ variant = "none" }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,11 +40,9 @@ const Navbar = ({ variant = "none" }) => {
         ${isOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
       `}>
         <ul className="flex flex-col lg:flex-row items-center lg:ms-20 space-y-8 lg:space-y-0 lg:space-x-8 list-none text-center">
-          <li><a href="#home" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">HOME</a></li>
-          <li><a href="#about" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">ABOUT</a></li>
-      
-
-          <li><a href="#contact" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">CONTACT</a></li>
+          <li><Link to="/" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">HOME</Link></li>
+          <li><Link to="/about" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">ABOUT</Link></li>
+          <li><Link to="/contact" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">CONTACT</Link></li>
         
           {/* Social Media khusus di dalam Hamburger (Mobile/Tablet) */}
           <li className="flex lg:hidden items-center space-x-6 pt-10 border-t border-white/10 w-48 justify-center text-white">
