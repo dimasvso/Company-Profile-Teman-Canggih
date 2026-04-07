@@ -38,17 +38,10 @@ const Navbar = ({ variant = "none" }) => {
         transition-transform duration-500 ease-in-out z-101
         ${isOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
       `}>
-        <ul className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8 list-none text-center">
+        <ul className="flex flex-col lg:flex-row items-center lg:ms-20 space-y-8 lg:space-y-0 lg:space-x-8 list-none text-center">
           <li><a href="#home" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">HOME</a></li>
           <li><a href="#about" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">ABOUT</a></li>
-          <li><a href="#projects" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">PROJECTS</a></li>
-          
-          {variant === "home" && (
-            <>
-              <li><a href="#expertise" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">EXPERTISE</a></li>
-              <li><a href="#consultation" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">CONSULTATION</a></li>
-            </>
-          )}
+      
 
           <li><a href="#contact" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">CONTACT</a></li>
         
