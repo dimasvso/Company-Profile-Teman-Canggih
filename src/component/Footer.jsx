@@ -22,7 +22,7 @@ const Footer = () => {
         <div>
           <h4 className="font-bold mb-6">Information</h4>
           <ul className="space-y-4 text-gray-400 text-sm">
-            <li><a href="#" className="hover:text-white transition">FAQ</a></li>
+            <li><a href="#faq" className="hover:text-white transition">FAQ</a></li>
             <li><a href="#" className="hover:text-white transition">Blog</a></li>
             <li><a href="#" className="hover:text-white transition">Support</a></li>
           </ul>
@@ -38,7 +38,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="p-6 rounded-xl ">
+        <div>
           <h4 className="font-bold mb-4">Subscribe</h4>
           <div className="flex bg-white rounded-lg overflow-hidden mb-4">
             <input 
@@ -46,7 +46,7 @@ const Footer = () => {
               placeholder="Email address" 
               className="bg-transparent text-black px-4 py-2 w-full outline-none text-sm"
             />
-            <button className="bg-black text-white px-4 py-2 hover:bg-gray-700 transition">
+            <button className="bg-black cursor-pointer text-white px-4 py-2 hover:bg-gray-700 transition">
               <FaArrowRight />
             </button>
           </div>
