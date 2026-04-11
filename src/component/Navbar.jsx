@@ -46,11 +46,8 @@ const Navbar = ({ variant = "none" }) => {
             <a href="#" className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
               <FaLinkedinIn />
             </a>
-            <a href="#" className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-              <FaFacebookF />
-            </a>
-            <a href="#" className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-              <FaTwitter />
+            <a href="#" className="hover:text-pink-500 transition-all text-xl">
+              <FaInstagram />
             </a>
           </li>
         </ul>
@@ -60,7 +57,6 @@ const Navbar = ({ variant = "none" }) => {
       <div className="hidden lg:flex items-center space-x-5 text-white">
         <a href="#" className="hover:text-blue-700 transition-all text-xl"><FaLinkedinIn /></a>
         <a href="#" className="hover:text-pink-500 transition-all text-xl"><FaInstagram /></a>
-        <a href="#" className="hover:text-blue-400 transition-all text-xl"><FaTwitter /></a>
       </div>
     </nav>
   );

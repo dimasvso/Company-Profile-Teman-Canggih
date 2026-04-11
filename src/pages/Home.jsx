@@ -20,6 +20,7 @@ import ChestaImg from '../assets/chesta.png';
 import Button from '../component/Button';
 import TeamCard from '../component/TeamCard';
 import Accordion from '../component/Accordion';
+import { Link } from 'react-router-dom';
 
 function Home() {
     useEffect(() => {
@@ -32,23 +33,95 @@ function Home() {
     }, []);
 
     const teamData = [
-        { name: "Syafiq Saputra", role: "Founder | CEO", desc: "A visionary dedicated to bridging innovation with real-world solutions.", image: SyafiqImg, socials: { ig: "#", linkedin: "#" } },
-        { name: "Nathan Chandra", role: "Co-Founder | COO", desc: "Building with precision and executing with discipline.", image: NathanImg, socials: { ig: "#", linkedin: "#" } },
-        { name: "Daffa Taufiq", role: "Chief Technology Officer", desc: "Orchestrating scalable and efficient technology ecosystems.", image: DaffaImg, socials: { ig: "#", linkedin: "#" } },
-        { name: "Nathanael", role: "Head Product", desc: "Aligning user needs with business objectives.", image: NathanaelImg, socials: { ig: "#", linkedin: "#" } },
-        { name: "Chika Anaya", role: "Project Manager", desc: "Bridging communication and ensuring every project runs on schedule.", image: ChikaImg, socials: { ig: "#", linkedin: "#" } },
-        { name: "Muhammad Zeeshan", role: "UI/UX Designer", desc: "Creating aesthetic and functional visuals.", image: ZeeshanImg, socials: { ig: "#", linkedin: "#" } },
-        { name: "Naufal Daffa", role: "Frontend Developer", desc: "Bringing designs to life through clean and responsive code.", image: NaufalImg, socials: { github: "#", ig: "#", linkedin: "#" } },
-        { name: "Dimas Susilo", role: "Frontend Developer", desc: "Developing modular and interactive UI components.", image: DimasImg, socials: { github: "#", ig: "#", linkedin: "#" } },
-        { name: "Afghan Alzena", role: "Backend Developer", desc: "Building secure and robust server architectures.", image: AfghanImg, socials: { github: "#", ig: "#", linkedin: "#" } },
-        { name: "Chesta Azka", role: "Backend Developer", desc: "Specialist in database and API optimization.", image: ChestaImg, socials: { github: "#", ig: "#", linkedin: "#" } }
+        {
+            name: "Syafiq Saputra",
+            role: "Founder | CEO",
+            desc: "A visionary dedicated to bridging innovation with real-world solutions.",
+            image: SyafiqImg,
+            socials: { ig: "syafiqyuu", linkedin: "https://www.linkedin.com/in/syafiq-saputra-5412893b2/" }
+        },
+        {
+            name: "Nathan Chandra",
+            role: "Co-Founder | COO",
+            desc: "Building with precision and executing with discipline.",
+            image: NathanImg,
+            socials: { ig: "nathnycr", linkedin: "https://www.linkedin.com/in/nathan-chandra-34992334b/" }
+        },
+        {
+            name: "Daffa Taufiq",
+            role: "Chief Technology Officer",
+            desc: "Orchestrating scalable and efficient technology ecosystems.",
+            image: DaffaImg,
+            socials: { ig: "dfatq_", linkedin: "https://www.linkedin.com/in/daffa-taufiqurrahman-05a3b9332/" }
+        },
+        {
+            name: "Nathanael",
+            role: "Head Product",
+            desc: "Aligning user needs with business objectives.",
+            image: NathanaelImg,
+            socials: { ig: "fransiskus_sinulingga" }
+        },
+        {
+            name: "Chika Anaya",
+            role: "Project Manager",
+            desc: "Bridging communication and ensuring every project runs on schedule.",
+            image: ChikaImg,
+            socials: { ig: "chiksyae", linkedin: "https://www.linkedin.com/in/chika-anaya-salsabila-857402333/" }
+        },
+        {
+            name: "Muhammad Zeeshan",
+            role: "UI/UX Designer",
+            desc: "Creating aesthetic and functional visuals.",
+            image: ZeeshanImg,
+            socials: { ig: "hesshanz" }
+        },
+        {
+            name: "Naufal Daffa",
+            role: "Frontend Developer",
+            desc: "Bringing designs to life through clean and responsive code.",
+            image: NaufalImg,
+            socials: { github: "https://github.com/daffa-naufal-musyava", ig: "daffa_naufalm", linkedin: "https://www.linkedin.com/in/naufal-daffa-musyava-b4ba81323/" }
+        },
+        {
+            name: "Dimas Susilo",
+            role: "Frontend Developer",
+            desc: "Developing modular and interactive UI components.",
+            image: DimasImg,
+            socials: { github: "https://github.com/dimasvso", ig: "dimaslso", linkedin: "https://www.linkedin.com/in/dimas-susilo/" }
+        },
+        {
+            name: "Afghan Alzena",
+            role: "Backend Developer",
+            desc: "Building secure and robust server architectures.",
+            image: AfghanImg,
+            socials: { github: "https://github.com/MuhamadAfghan", ig: "_afgnn29", linkedin: "https://www.linkedin.com/in/muhamadafghan/" }
+        },
+        {
+            name: "Chesta Azka",
+            role: "Backend Developer",
+            desc: "Specialist in database and API optimization.",
+            image: ChestaImg,
+            socials: { github: "https://github.com/ChestaAzka", ig: "chestadotcom" }
+        }
     ];
 
     const faqData = [
-        { question: "How do you clone a template from the Showcase?", answer: "Go to the Webflow Showcase, find the template you like, and click the 'Clone' button." },
-        { question: "What is Webflow and why is it the best?", answer: "Webflow is a visual development platform that allows building responsive sites without code." },
-        { question: "Why is teman canggih the best?", answer: "We provide high-quality, scalable templates tailored for modern businesses." },
-        { question: "When was Webflow officially launched?", answer: "Webflow was officially launched in 2013." }
+        {
+            question: "How do you clone a template from the Showcase?",
+            answer: "Go to the Webflow Showcase, find the template you like, and click the 'Clone' button."
+        },
+        {
+            question: "What is Webflow and why is it the best?",
+            answer: "Webflow is a visual development platform that allows building responsive sites without code."
+        },
+        {
+            question: "Why is teman canggih the best?",
+            answer: "We provide high-quality, scalable templates tailored for modern businesses."
+        },
+        {
+            question: "When was Webflow officially launched?",
+            answer: "Webflow was officially launched in 2013."
+        }
     ];
 
     return (
@@ -78,7 +151,9 @@ function Home() {
                         <span className="text-blue-600 font-bold text-xs tracking-widest uppercase mb-4 block">about us</span>
                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#0B1120] leading-tight mb-6">We Help You <br className="hidden md:block" /> Prioritize Your business</h2>
                         <p className="text-gray-500 text-base md:text-lg mb-10 max-w-lg mx-auto lg:mx-0">Browse therapists, book a session, and start your healing journey.</p>
-                        <Button variant="dark" size="lg">Contact Us</Button>
+                        <Link to="/contact">
+                            <Button variant="dark" size="lg">Contact Us</Button>
+                        </Link>
                     </div>
                     <div className="w-full lg:w-1/2 order-1 lg:order-2" data-aos="zoom-in">
                         <div className="relative w-full max-w-125 mx-auto h-100 rounded-[40px] md:rounded-[80px] overflow-hidden shadow-xl">
@@ -100,9 +175,9 @@ function Home() {
                             <p>Finding the latest innovations that the industry will need with the latest technology.</p>
                         </div>
                         <div className="mt-10 flex items-center gap-4" data-aos="fade-up" data-aos-delay="300">
-                            <img src="https://i.pravatar.cc/150?u=syafiq" alt="CEO" className="w-12 h-12 rounded-full grayscale" />
+                            <img src={SyafiqImg} alt="CEO" className="w-12 h-12 rounded-full grayscale" />
                             <div>
-                                <h4 className="font-bold text-[#0B1120]">syafiq</h4>
+                                <h4 className="font-bold text-[#0B1120]">Syafiq</h4>
                                 <p className="text-gray-500 text-xs">CEO</p>
                             </div>
                         </div>

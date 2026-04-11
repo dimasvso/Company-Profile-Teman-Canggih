@@ -29,22 +29,13 @@ export default function TeamCard({ name, role, desc, image, socials, isLarge = f
                 
                 <div className="flex items-center space-x-4 text-gray-400">
                     {socials?.github && (
-                        <a href={socials.github} className="hover:text-black transition-colors"><FaGithub size={16} /></a>
+                        <a href={socials.github} target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors"><FaGithub size={16} /></a>
                     )}
                     {socials?.linkedin && (
-                        <a href={socials.linkedin} className="hover:text-blue-700 transition-colors"><FaLinkedinIn size={16} /></a>
-                    )}
-                    {socials?.twitter && (
-                        <a href={socials.twitter} className="hover:text-blue-400 transition-colors"><FaTwitter size={16} /></a>
-                    )}
-                    {socials?.dribbble && (
-                        <a href={socials.dribbble} className="hover:text-pink-500 transition-colors"><FaDribbble size={16} /></a>
+                        <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors"><FaLinkedinIn size={16} /></a>
                     )}
                     {socials?.ig && (
-                        <a href={socials.ig} className="hover:text-pink-600 transition-colors"><FaInstagram size={16} /></a>
-                    )}
-                    {socials?.fb && (
-                        <a href={socials.fb} className="hover:text-blue-600 transition-colors"><FaFacebookF size={16} /></a>
+                        <a href={`https://www.instagram.com/${socials.ig}/`} target="_blank" rel="noopener noreferrer" className="hover:text-pink-600 transition-colors"><FaInstagram size={16} /></a>
                     )}
                 </div>
             </div>
