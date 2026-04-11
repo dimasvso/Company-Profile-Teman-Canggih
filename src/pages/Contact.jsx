@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaLinkedinIn, FaCheckCircle } from 'react-icons/fa';
-
+       
 const Contact = () => {
   const form = useRef();
   const [status, setStatus] = useState('idle');
