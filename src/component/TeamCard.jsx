@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaDribbble, FaGithub, FaLinkedinIn, FaInstagram
 export default function TeamCard({ name, role, desc, image, socials, isLarge = false }) {
     return (
         <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col h-full border border-gray-100 group">
-            <div className={`bg-[#E5F3FF] w-full flex items-center justify-center transition-all overflow-hidden ${isLarge ? 'h-64 lg:h-80' : 'h-56'}`}>
+            <div className={`bg-[#E5F3FF] w-full flex items-center justify-center transition-all overflow-hidden ${isLarge ? 'h-64 lg:h-70' : 'h-56'}`}>
                 {image ? (
                     <img 
                         src={image} 
