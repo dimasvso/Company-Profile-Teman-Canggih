@@ -8,7 +8,7 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setStatus('loading');
+    setStatus('loading');                     
 
     const SERVICE_ID = "service_0d4j17f";
     const TEMPLATE_ID = "template_f0munop";
