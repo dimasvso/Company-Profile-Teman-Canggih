@@ -1,5 +1,6 @@
 import Button from "../component/Button";
 import TemanCanggih from "../assets/TemanCanggih.jpeg";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -31,12 +32,14 @@ function About() {
             solusi yang tidak hanya canggih secara teknologi, tetapi juga mudah
             digunakan dan memberikan nilai nyata bagi pengguna.
           </p>
-          <Button
-            variant="hero"
-            className="bg-[#06B6D4]! text-white!"
-          >
-            Contact Us
-          </Button>
+          <a href="/contact">
+            <Button
+              variant="hero"
+              className="bg-[#06B6D4]! text-white!"
+            >
+              Contact Us
+            </Button>
+          </a>
         </section>
 
         <section className="flex items-center justify-center -mt-10 py-15 px-6">

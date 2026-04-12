@@ -151,9 +151,9 @@ function Home() {
                         <span className="text-blue-600 font-bold text-xs tracking-widest uppercase mb-4 block">about us</span>
                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#0B1120] leading-tight mb-6">We Help You <br className="hidden md:block" /> Prioritize Your business</h2>
                         <p className="text-gray-500 text-base md:text-lg mb-10 max-w-lg mx-auto lg:mx-0">Browse therapists, book a session, and start your healing journey.</p>
-                        <Link to="/contact">
+                        <a href="/contact">
                             <Button variant="dark" size="lg">Contact Us</Button>
-                        </Link>
+                        </a>
                     </div>
                     <div className="w-full lg:w-1/2 order-1 lg:order-2" data-aos="zoom-in">
                         <div className="relative w-full max-w-125 mx-auto h-100 rounded-[40px] md:rounded-[80px] overflow-hidden shadow-xl">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedinIn, FaFacebookF, FaTwitter,FaArrowRight } from 'react-icons/fa';
+import { FaLinkedinIn, FaFacebookF, FaTwitter,FaArrowRight, FaInstagram } from 'react-icons/fa';
 import FooterLogo from '../assets/footer-logo.jpg';
 
 const Footer = () => {
@@ -31,7 +31,7 @@ const Footer = () => {
         <div>
           <h4 className="font-bold mb-6">Company</h4>
           <ul className="space-y-4 text-gray-400 text-sm">
-            <li><a href="#" className="hover:text-white transition">About us</a></li>
+            <li><a href="/about" className="hover:text-white transition">About us</a></li>
             <li><a href="#" className="hover:text-white transition">Careers</a></li>
             <li><a href="#" className="hover:text-white transition">Contact us</a></li>
             <li><a href="#" className="hover:text-white transition">Lift Media</a></li>
@@ -73,14 +73,11 @@ const Footer = () => {
         </div>
 
         <div className="flex space-x-4">
-          <a href="#" className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
+          <a href="https://www.linkedin.com/in/teman-canggih-352a16400" className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
             <FaLinkedinIn />
           </a>
-          <a href="#" className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-            <FaFacebookF />
-          </a>
-          <a href="#" className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-            <FaTwitter />
+          <a href="https://www.instagram.com/temancanggih_id/" className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
+            <FaInstagram />
           </a>
         </div>
       </div>

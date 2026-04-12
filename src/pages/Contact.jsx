@@ -108,7 +108,7 @@ const Contact = () => {
             <div className="md:col-span-2">
               <p className="font-bold text-sm md:text-base mb-6 text-black">Select Subject?</p>
               <div className="flex flex-wrap gap-4 md:gap-8">
-                {['General', 'Support', 'Billing', 'Other'].map((item, idx) => (
+                {['General Inquiry', 'Technical Support', 'Billing', 'Other'].map((item, idx) => (
                   <label key={idx} className="flex items-center gap-3 cursor-pointer text-sm font-medium">
                     <input type="radio" name="subject" value={item} className="w-4 h-4 accent-black" defaultChecked={idx === 0} />
                     {item}
