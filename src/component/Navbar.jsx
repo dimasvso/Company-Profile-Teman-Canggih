@@ -36,17 +36,17 @@ const Navbar = ({ variant = "none" }) => {
         transition-transform duration-500 ease-in-out z-101
         ${isOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
       `}>
-        <ul className="flex flex-col lg:flex-row items-center lg:ms-20 space-y-8 lg:space-y-0 lg:space-x-8 list-none text-center">
+        <ul className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8 list-none text-center">
           <li><Link to="/" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">HOME</Link></li>
           <li><Link to="/about" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">ABOUT</Link></li>
           <li><Link to="/contact" onClick={() => setIsOpen(false)} className="text-white text-[13px] tracking-[0.2em] hover:text-blue-400 transition-colors uppercase font-medium">CONTACT</Link></li>
 
           {/* Social Media khusus di dalam Hamburger (Mobile/Tablet) */}
           <li className="flex lg:hidden items-center space-x-6 pt-10 border-t border-white/10 w-48 justify-center text-white">
-            <a href="#" className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
+            <a href="https://www.linkedin.com/in/teman-canggih-352a16400" className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
               <FaLinkedinIn />
             </a>
-            <a href="#" className="hover:text-pink-500 transition-all text-xl">
+            <a href="https://www.instagram.com/temancanggih_id/" className="hover:text-pink-500 transition-all text-xl">
               <FaInstagram />
             </a>
           </li>
@@ -55,8 +55,8 @@ const Navbar = ({ variant = "none" }) => {
 
       {/* Social Media Desktop - Hanya muncul di LG (Laptop/Desktop) */}
       <div className="hidden lg:flex items-center space-x-5 text-white">
-        <a href="#" className="hover:text-blue-700 transition-all text-xl"><FaLinkedinIn /></a>
-        <a href="#" className="hover:text-pink-500 transition-all text-xl"><FaInstagram /></a>
+        <a href="https://www.linkedin.com/in/teman-canggih-352a16400" className="hover:text-blue-700 transition-all text-xl"><FaLinkedinIn /></a>
+        <a href="https://www.instagram.com/temancanggih_id/" className="hover:text-pink-500 transition-all text-xl"><FaInstagram /></a>
       </div>
     </nav>
   );
