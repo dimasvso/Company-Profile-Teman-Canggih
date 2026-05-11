@@ -1,14 +1,14 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaLinkedinIn, FaCheckCircle } from 'react-icons/fa';
-
+       
 const Contact = () => {
   const form = useRef();
   const [status, setStatus] = useState('idle');
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setStatus('loading');
+    setStatus('loading');                     
 
     const SERVICE_ID = "service_0d4j17f";
     const TEMPLATE_ID = "template_f0munop";

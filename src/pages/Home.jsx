@@ -11,8 +11,8 @@ import DaffaImg from '../assets/daffa.png';
 import NathanaelImg from '../assets/natanael.png';
 import ZeeshanImg from '../assets/zeeshan.png';
 import NaufalImg from '../assets/naufal.jpeg';
-import DimasImg from '../assets/dimas.png';
-import AfghanImg from '../assets/afgan.png';
+import DimasImg from '../assets/Dimas.png';
+import AfghanImg from '../assets/Afgan.png';
 import ChestaImg from '../assets/chesta.png';
 
 // Components
