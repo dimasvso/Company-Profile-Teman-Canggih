@@ -9,7 +9,6 @@ import NathanImg from '../assets/Nathan.png';
 import SyafiqImg from '../assets/Syafiq.png';
 import DaffaImg from '../assets/daffa.png';
 import NathanaelImg from '../assets/natanael.png';
-import ChikaImg from '../assets/chika.jpeg';
 import ZeeshanImg from '../assets/zeeshan.png';
 import NaufalImg from '../assets/naufal.jpeg';
 import DimasImg from '../assets/Dimas.png';
@@ -42,7 +41,7 @@ function Home() {
         },
         {
             name: "Nathan Chandra",
-            role: "Co-Founder | COO",
+            role: "Co-Founder | COO | PM",
             desc: "Building with precision and executing with discipline.",
             image: NathanImg,
             socials: { ig: "nathnycr", linkedin: "https://www.linkedin.com/in/nathan-chandra-34992334b/" }
@@ -60,13 +59,6 @@ function Home() {
             desc: "Aligning user needs with business objectives.",
             image: NathanaelImg,
             socials: { ig: "fransiskus_sinulingga" }
-        },
-        {
-            name: "Chika Anaya",
-            role: "Project Manager",
-            desc: "Bridging communication and ensuring every project runs on schedule.",
-            image: ChikaImg,
-            socials: { ig: "chiksyae", linkedin: "https://www.linkedin.com/in/chika-anaya-salsabila-857402333/" }
         },
         {
             name: "Muhammad Zeeshan",
@@ -150,7 +142,7 @@ function Home() {
                     <div className="w-full lg:w-1/2 order-2 lg:order-1 text-center lg:text-left" data-aos="fade-right">
                         <span className="text-blue-600 font-bold text-xs tracking-widest uppercase mb-4 block">about us</span>
                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#0B1120] leading-tight mb-6">We Help You <br className="hidden md:block" /> Prioritize Your business</h2>
-                        <p className="text-gray-500 text-base md:text-lg mb-10 max-w-lg mx-auto lg:mx-0">Browse therapists, book a session, and start your healing journey.</p>
+                        <p className="text-gray-500 text-base md:text-lg mb-10 max-w-lg mx-auto lg:mx-0">Transforming problems into opportunities with technology.</p>
                         <a href="/contact">
                             <Button variant="dark" size="lg">Contact Us</Button>
                         </a>
@@ -193,8 +185,8 @@ function Home() {
                     </div>
 
                     {/* Founders (Large) */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8 lg:px-32">
-                        {teamData.slice(0, 2).map((member, index) => (
+                    <div className="flex justify-center mb-8 lg:px-32">
+                        {teamData.slice(0, 1).map((member, index) => (
                             <div key={index} data-aos="fade-up" data-aos-delay={index * 200}>
                                 <TeamCard {...member} isLarge={true} />
                             </div>
@@ -203,7 +195,7 @@ function Home() {
 
                     {/* Staff (Small) */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {teamData.slice(2).map((member, index) => (
+                        {teamData.slice(1).map((member, index) => (
                             <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
                                 <TeamCard {...member} isLarge={false} />
                             </div>
