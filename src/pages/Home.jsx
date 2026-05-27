@@ -76,7 +76,7 @@ function Home() {
         },
         {
             name: "Dimas Susilo",
-            role: "Machine Engineer",
+            role: "Machine Learning Engineer",
             desc: "Developing modular and interactive UI components.",
             image: DimasImg,
             socials: { github: "https://github.com/dimasvso", ig: "dimaslso", linkedin: "https://www.linkedin.com/in/dimas-susilo/" }
