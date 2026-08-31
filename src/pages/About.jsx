@@ -1,6 +1,10 @@
 import Button from "../component/Button";
 import TemanCanggih from "../assets/TemanCanggih.jpeg";
 import { Link } from "react-router-dom";
+import ImageLoader from "../component/ImageLoader";
+import AbsensiImg from "../assets/projects/Absensi.png";
+import MenuPageImg from "../assets/projects/MenuPage.png";
+import SystemMonitoringImg from "../assets/projects/SystemMonitoring.png";
 
 function About() {
   return (
@@ -65,7 +69,7 @@ function About() {
             <div className="absolute rounded-4xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
 
             <div className="relative bg-[#1E293B] p-3 md:p-4 rounded-4xl shadow-2xl overflow-hidden border border-slate-700">
-              <img
+              <ImageLoader
                 src={TemanCanggih}
                 className="lg:w-full h-auto rounded-3xl object-cover grayscale-20 hover:grayscale-0 transition duration-700"
                 alt="Teman Canggih Team Members"
@@ -83,6 +87,65 @@ function About() {
 
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#06B6D4]/10 rounded-full blur-2xl"></div>
             <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-600/10 rounded-full blur-3xl"></div>
+          </div>
+        </section>
+
+        {/* Portfolio Section */}
+        <section className="py-20 px-6 max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
+              Our Portfolio
+            </h2>
+            <p className="text-slate-300 text-sm md:text-base max-w-2xl mx-auto">
+              Beberapa hasil karya dan proyek yang telah kami kerjakan.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Dummy 1 */}
+            <div className="bg-[#1E293B] rounded-2xl overflow-hidden border border-slate-700 shadow-xl group hover:border-[#06B6D4]/50 transition-colors duration-300">
+              <div className="aspect-video bg-slate-800 overflow-hidden relative">
+                <div className="absolute inset-0 bg-[#06B6D4]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                <ImageLoader
+                  src={AbsensiImg}
+                  alt="Aplikasi Absensi"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white">Aplikasi Absensi</h3>
+              </div>
+            </div>
+
+            {/* Dummy 2 */}
+            <div className="bg-[#1E293B] rounded-2xl overflow-hidden border border-slate-700 shadow-xl group hover:border-[#06B6D4]/50 transition-colors duration-300">
+              <div className="aspect-video bg-slate-800 overflow-hidden relative">
+                <div className="absolute inset-0 bg-[#06B6D4]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                <ImageLoader
+                  src={MenuPageImg}
+                  alt="Menu Page System"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white">Menu Page System</h3>
+              </div>
+            </div>
+
+            {/* Dummy 3 */}
+            <div className="bg-[#1E293B] rounded-2xl overflow-hidden border border-slate-700 shadow-xl group hover:border-[#06B6D4]/50 transition-colors duration-300">
+              <div className="aspect-video bg-slate-800 overflow-hidden relative">
+                <div className="absolute inset-0 bg-[#06B6D4]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                <ImageLoader
+                  src={SystemMonitoringImg}
+                  alt="System Monitoring"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white">System Monitoring</h3>
+              </div>
+            </div>
           </div>
         </section>
       </section>

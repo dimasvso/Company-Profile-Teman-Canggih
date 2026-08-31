@@ -4,9 +4,9 @@ export default function ImageLoader({ src, alt, className }) {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="relative w-full h-full overflow-hidden bg-gray-200">
+    <div className="relative w-full h-full overflow-hidden">
       {!loaded && (
-        <div className="absolute inset-0 animate-pulse bg-gray-200" />
+        <div className="absolute inset-0 animate-pulse bg-slate-700" />
       )}
       <img
         src={src}

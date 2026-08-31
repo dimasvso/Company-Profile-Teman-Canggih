@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -116,22 +116,64 @@ function Home() {
         }
     ];
 
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = HeroImg;
+
+        img.onload = () => {
+            setImageLoaded(true);
+        };
+    }, []);
+
+
     return (
         <div className="flex flex-col w-full overflow-x-hidden">
-            <section id="home" className="relative w-full min-h-screen flex items-end justify-end overflow-hidden">
-                <div className="absolute inset-0 w-full h-full bg-cover md:bg-left lg:bg-top bg-no-repeat z-0" style={{ backgroundImage: `url(${HeroImg})` }}>
+            <section
+                id="home"
+                className="relative w-full min-h-screen flex items-end justify-end overflow-hidden"
+            >
+                {/* Loader */}
+                {!imageLoaded && (
+                    <div className="absolute inset-0 z-50 flex items-center justify-center bg-[#0B1120]">
+                        <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin"></div>
+                    </div>
+                )}
+
+                {/* Background Image */}
+                <div
+                    className={`absolute inset-0 w-full h-full bg-cover md:bg-left lg:bg-top bg-no-repeat z-0 transition-opacity duration-700 ${imageLoaded ? "opacity-100" : "opacity-0"
+                        }`}
+                    style={{ backgroundImage: `url(${HeroImg})` }}
+                >
                     <div className="absolute inset-0 bg-black/20"></div>
                 </div>
-                <div className="relative outline-2 outline-white z-10 w-full rounded-tl-[60px] md:rounded-tl-[130px] lg:w-[50%] flex items-end" data-aos="fade-left" data-aos-duration="500">
+
+                {/* Content */}
+                <div
+                    className={`relative z-10 w-full rounded-tl-[60px] md:rounded-tl-[130px] lg:w-[50%] flex items-end transition-all duration-700 ${imageLoaded
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 translate-x-10"
+                        }`}
+                    data-aos="fade-left"
+                    data-aos-duration="500"
+                >
                     <div className="bg-[#0B1120] w-full p-8 md:p-10 lg:p-17 rounded-tl-[60px] md:rounded-tl-[130px] border-t border-l border-white/10 flex flex-col justify-center text-white shadow-2xl">
                         <h1 className="text-2xl md:ms-10 lg:text-[56px] font-bold leading-tight mb-5">
                             We combine design, thinking and technical
                         </h1>
+
                         <p className="text-gray-400 md:ms-10 text-sm md:text-base mb-8 max-w-md leading-relaxed font-light">
-                            We empower your business with cutting-edge digital solutions, turning complex challenges into seamless growth.
+                            We empower your business with cutting-edge digital
+                            solutions, turning complex challenges into seamless
+                            growth.
                         </p>
+
                         <div className="md:ms-10">
-                            <Button variant="hero" size="md">Work With Us</Button>
+                            <Button variant="hero" size="md">
+                                Work With Us
+                            </Button>
                         </div>
                     </div>
                 </div>
@@ -143,9 +185,9 @@ function Home() {
                         <span className="text-blue-600 font-bold text-xs tracking-widest uppercase mb-4 block">about us</span>
                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#0B1120] leading-tight mb-6">We Help You <br className="hidden md:block" /> Prioritize Your business</h2>
                         <p className="text-gray-500 text-base md:text-lg mb-10 max-w-lg mx-auto lg:mx-0">Transforming problems into opportunities with technology.</p>
-                        <a href="/contact">
+                        <Link to="/contact">
                             <Button variant="dark" size="lg">Contact Us</Button>
-                        </a>
+                        </Link>
                     </div>
                     <div className="w-full lg:w-1/2 order-1 lg:order-2" data-aos="zoom-in">
                         <div className="relative w-full max-w-125 mx-auto h-100 rounded-[40px] md:rounded-[80px] overflow-hidden shadow-xl">
