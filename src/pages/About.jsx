@@ -5,6 +5,7 @@ import ImageLoader from "../component/ImageLoader";
 import AbsensiImg from "../assets/projects/Absensi.png";
 import MenuPageImg from "../assets/projects/MenuPage.png";
 import SystemMonitoringImg from "../assets/projects/SystemMonitoring.png";
+import AquaLogo from "../assets/projects/aqua-2019-logo-png_seeklogo-361204.png";
 
 function About() {
   return (
@@ -65,7 +66,7 @@ function About() {
         </section>
 
         <section className="flex items-center justify-center -mt-10 py-15 px-6">
-          <div className="relative group max-w-4xl">
+          <div className="relative group max-w-3xl lg:max-w-4xl xl:max-w-5xl">
             <div className="absolute rounded-4xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
 
             <div className="relative bg-[#1E293B] p-3 md:p-4 rounded-4xl shadow-2xl overflow-hidden border border-slate-700">
@@ -114,6 +115,9 @@ function About() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white">Aplikasi Absensi</h3>
+                <p className="mt-2 text-sm text-slate-300 leading-relaxed">
+                  Sistem absensi digital untuk memantau kehadiran, jam kerja, dan laporan karyawan secara real-time.
+                </p>
               </div>
             </div>
 
@@ -129,11 +133,14 @@ function About() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white">Menu Page System</h3>
+                <p className="mt-2 text-sm text-slate-300 leading-relaxed">
+                  Antarmuka menu digital yang mempermudah navigasi produk, pemesanan, dan akses informasi pelanggan.
+                </p>
               </div>
             </div>
 
             {/* Dummy 3 */}
-            <div className="bg-[#1E293B] rounded-2xl overflow-hidden border border-slate-700 shadow-xl group hover:border-[#06B6D4]/50 transition-colors duration-300">
+            {/* <div className="bg-[#1E293B] rounded-2xl overflow-hidden border border-slate-700 shadow-xl group hover:border-[#06B6D4]/50 transition-colors duration-300">
               <div className="aspect-video bg-slate-800 overflow-hidden relative">
                 <div className="absolute inset-0 bg-[#06B6D4]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 <ImageLoader
@@ -143,7 +150,31 @@ function About() {
                 />
               </div>
               <div className="p-6">
+                <h3 className="text-xl font-semibold text-white">System Monitoring</h3>
+                <p className="mt-2 text-sm text-slate-300 leading-relaxed">
+                  Dashboard pemantauan performa sistem yang membantu tim operasional melihat status dan potensi masalah lebih cepat.
+                </p>
+              </div>
+            </div> */}
+
+            {/* AQUA Manufacturing */}
+            <div className="bg-[#1E293B] rounded-2xl overflow-hidden border border-slate-700 shadow-xl group hover:border-[#06B6D4]/50 transition-colors duration-300">
+              <div className="aspect-video bg-slate-800 overflow-hidden relative">
+                <div className="absolute inset-0 bg-[#06B6D4]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                <ImageLoader
+                  src={SystemMonitoringImg}
+                  alt="Industrial Monitoring System for AQUA Manufacturing"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-3 right-3 z-20 w-14 sm:w-16 md:w-18 lg:w-20 rounded-full bg-white/90 p-2 shadow-lg backdrop-blur-sm border border-slate-200">
+                  <img src={AquaLogo} alt="AQUA logo" className="w-full h-auto object-contain" />
+                </div>
+              </div>
+              <div className="p-6">
                 <h3 className="text-xl font-semibold text-white">Industrial Monitoring System for AQUA Manufacturing</h3>
+                <p className="mt-2 text-sm text-slate-300 leading-relaxed">
+                  Solusi monitoring industri untuk memantau proses produksi, performa mesin, dan data operasional secara terintegrasi.
+                </p>
               </div>
             </div>
           </div>

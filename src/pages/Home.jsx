@@ -3,7 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // Assets
-import HeroImg from '../assets/Hero-Image.png';
+import HeroImg from '../assets/TemanCanggih.jpeg';
+import AboutImg from '../assets/abousImg.jpeg';
 import Outlines from '../assets/outlines.png';
 import NathanImg from '../assets/Nathan.png';
 import SyafiqImg from '../assets/Syafiq.png';
@@ -19,6 +20,7 @@ import ChestaImg from '../assets/chesta.png';
 import Button from '../component/Button';
 import TeamCard from '../component/TeamCard';
 import Accordion from '../component/Accordion';
+import ImageLoader from '../component/ImageLoader';
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -132,7 +134,7 @@ function Home() {
         <div className="flex flex-col w-full overflow-x-hidden">
             <section
                 id="home"
-                className="relative w-full min-h-screen flex items-end justify-end overflow-hidden"
+                className="relative w-full min-h-screen flex items-end justify-end overflow-hidden pt-20 md:pt-24 lg:pt-0"
             >
                 {/* Loader */}
                 {!imageLoaded && (
@@ -152,14 +154,14 @@ function Home() {
 
                 {/* Content */}
                 <div
-                    className={`relative z-10 w-full rounded-tl-[60px] md:rounded-tl-[130px] lg:w-[50%] flex items-end transition-all duration-700 ${imageLoaded
+                    className={`relative z-10 w-full mt-10 md:mt-16 lg:mt-0 rounded-tl-[60px] md:rounded-tl-[130px] lg:w-[50%] flex items-end transition-all duration-700 ${imageLoaded
                             ? "opacity-100 translate-x-0"
                             : "opacity-0 translate-x-10"
                         }`}
                     data-aos="fade-left"
                     data-aos-duration="500"
                 >
-                    <div className="bg-[#0B1120] w-full p-8 md:p-10 lg:p-17 rounded-tl-[60px] md:rounded-tl-[130px] border-t border-l border-white/10 flex flex-col justify-center text-white shadow-2xl">
+                    <div className="bg-[#0B1120] w-full p-8 md:p-10 lg:p-17 rounded-tl-[60px] md:rounded-tl-[130px] border-t border-l border-white/10 flex flex-col justify-center text-white shadow-2xl -mt-2 md:-mt-4 lg:mt-0">
                         <h1 className="text-2xl md:ms-10 lg:text-[56px] font-bold leading-tight mb-5">
                             We combine design, thinking and technical
                         </h1>
@@ -171,9 +173,11 @@ function Home() {
                         </p>
 
                         <div className="md:ms-10">
-                            <Button variant="hero" size="md">
-                                Work With Us
-                            </Button>
+                            <Link to="/contact">
+                                <Button variant="hero" size="md">
+                                    Work With Us
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -190,8 +194,12 @@ function Home() {
                         </Link>
                     </div>
                     <div className="w-full lg:w-1/2 order-1 lg:order-2" data-aos="zoom-in">
-                        <div className="relative w-full max-w-125 mx-auto h-100 rounded-[40px] md:rounded-[80px] overflow-hidden shadow-xl">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1000" alt="Business" className="w-full h-full object-cover mix-blend-multiply opacity-80" />
+                        <div className="relative w-full max-w-[600px] mx-auto h-[200px] md:h-[320px] lg:h-[350px] rounded-[40px] md:rounded-[80px] overflow-hidden shadow-xl">
+                            <ImageLoader
+                                src={AboutImg}
+                                alt="Business"
+                                className="w-full h-full object-cover object-center mix-blend-multiply opacity-80"
+                            />
                         </div>
                     </div>
                 </div>
