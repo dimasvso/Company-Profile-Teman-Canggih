@@ -132,7 +132,7 @@ function About() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white">Menu Page System</h3>
+                <h3 className="text-xl font-semibold text-white">Smart Order</h3>
                 <p className="mt-2 text-sm text-slate-300 leading-relaxed">
                   Antarmuka menu digital yang mempermudah navigasi produk, pemesanan, dan akses informasi pelanggan.
                 </p>
