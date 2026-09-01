@@ -143,7 +143,7 @@ function About() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white">System Monitoring</h3>
+                <h3 className="text-xl font-semibold text-white">Industrial Monitoring System for AQUA Manufacturing</h3>
               </div>
             </div>
           </div>
